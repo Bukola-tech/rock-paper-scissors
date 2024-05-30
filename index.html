@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlpaWP5aWlv+CgoL/goKC/5aWlv+WlpY/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlpaWfpaWlv+CgoL/lpaW/5aWlv+Wlpb/ra2t/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJaWlv+Wlpb/lpaW/5aWlv+tra3/ra2t/62trf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWlpb/lpaW/62trf+tra3/vb29/62trf+WlpZ+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJaWlr2tra3/vb29/729vf+WlpZ+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICA/wAAAACAgID/AAAAADMzM70zMzP/MzMzfgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgID/RUVF/zMzM/8zMzN+AAAAAAAAAAAAAAAAqrq/pKq6v+Oqur/jqrq/46q6v+Oqur+/AAAAAAAAAAAzMzN+MzMz/zMzM/+AgID/gICA/4CAgP+AgIB+AAAAAKq6v+O/1+D/yN/o/7/X4P+/1+D/qrq/4wAAAAAAAAAAMzMz/wAAAAAzMzP/AAAAAAAAAAAAAAAAAAAAAAAAAACqur/jvdHZ/7/X4P/I3+j/yN/o/6q6v+MAAAAAAAAAAAAAAAAzMzP/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqrq/47/X4P+90dn/v9fg/7/X4P+qur/jAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKq6v+PI3+j/v9fg/73R2f+90dn/qrq/4wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACqur/jv9fg/8jf6P+/1+D/v9fg/6q6v+MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqrq/473R2f+/1+D/yN/o/8jf6P+qur/jAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKq6v7+qur/jqrq/46q6v+Oqur/jqrq/pAAAAAAAAAAA/w8AAP4HAAD8BwAA/A8AAP4fAAD//wAAv/8AAFP/AACPAwAAgwMAAF8DAAC/AwAA/wMAAP8DAAD/AwAA/wMAAA==" rel="icon" type="image/x-icon">
+    <title>Rock,Paper and Scissors Game</title>
+    
+</head>
+<body class="light-mode">
+
+
+    <div id="choose1" >
+        <h1 id="welcome">Choose Avatar</h1>
+        <div id="avat"> 
+            <div id="event1" class="avatar" onclick="selectAvatar('avatar1')">
+                <img src="./MEDIA/avatar/avatar1.png" id="avag1" alt="">
+            </div>
+            <div id="event2" class="avatar" onclick="selectAvatar('avatar2')">
+                <img src="./MEDIA/avatar/avatar2.png" id="avag2" alt="">
+            </div>
+        </div>        
+            <button id="next" onclick="moveToChoose2()">Next Page</button>
+    </div>
+
+    <div id="choose2" class="hidden">
+        <h1 id="welcome">Input Your Name</h1>
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <button id="enter" onclick="saveNameAndMoveToWelcome()">Join Game</button>
+    </div>
+
+
+    <div id="wel" class="hidden fade-in">
+        <h1 id="welcome">Welcome <span id="playerName"></span></h1>
+        <img id="selectedAvatarImage" alt="Selected Avatar">
+    </div>
+
+
+    
+    <div id="games">
+        <nav>
+            <h3>Syntax</h3>
+            <div id="right">
+                <h2 id="name2"></h2>
+                <div id="avatar1">
+                    <img id="avatarSrc" src="" alt=""> 
+                </div>
+
+                <div class="toggle-container">
+                    <input type="checkbox" id="switch" placeholder="tog" class="checkbox" />
+                    <label for="switch" class="toggle">
+                        <p></p>
+                    </label>
+                </div>
+            </div>
+        </nav>
+
+        <div class= "all">
+            <h2 id="sel"> Rock-Paper-scissors Game</h2>
+            <p id="select">Choose Rock, Paper, Scissors to beat the Computer. <br>                    Rock crushes scissors, scissors cuts paper, 
+                Paper covers rock. <br>
+                GOOD LUCK!</p>
+            <div class= "all_icon">
+                <div class= "icon"><img src="./MEDIA/rock.png" alt=""></div>
+                <div class= "icon"><img src="./MEDIA/paper.png" alt=""></div>
+                <div class= "icon"><img src="./MEDIA/scissor.png" alt=""></div>
+            </div>
+                <div id= "selectedChoices">
+                    <!-- <div class= "you"><h2>YOU</h2><span><img src="./MEDIA/rock.png" alt=""></span></div>
+                    <div class= "comp"><h2>COMPUTER</h2><span><img src="./MEDIA/rock.png" alt=""></span></div> -->
+                    </div>
+                <div id="man">
+                    <div id= "outcome"><h1></h1></div>
+                </div>
+
+                <div id="score">
+                    <p id="scoreText"> <span id="playerScore">0</span> - <span id="computerScore">0</span></p>
+                  </div>
+                  
+            </div>
+
+
+
+    </div>
+    
+    
+    <footer> Syntax &copy; 2024, All Rights Reserved <span id="date">Facebook | Twitter</span></footer>
+</body>
+</html>
